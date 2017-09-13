@@ -11,6 +11,7 @@ import android.widget.Toast;
 
 import churt.a12explorers.Main.MainActivity;
 import churt.a12explorers.R;
+import churt.a12explorers.Register.RegisterActivity;
 
 /**
  * Created by Christopher Hurt on 9/8/2017.
@@ -27,6 +28,7 @@ public class LoginActivity extends Activity implements LoginView,
     private EditText inputEmail;
     private EditText inputPassword;
     private TextView unhidePass;
+    private TextView toRegister;
     private Button button;
     private LoginPresenterImpl presenter;
 
@@ -39,6 +41,7 @@ public class LoginActivity extends Activity implements LoginView,
         inputEmail = (EditText) findViewById(R.id.loginEmailInput);
         inputPassword = (EditText) findViewById(R.id.loginPasswordInput);
         unhidePass = (TextView) findViewById(R.id.loginUnhidePassword);
+        toRegister = (TextView) findViewById(R.id.loginAlreadyUser);
         button = (Button) findViewById(R.id.loginBtn);
 
         //Initialize Presenter
@@ -47,7 +50,7 @@ public class LoginActivity extends Activity implements LoginView,
         //Set onClick Listeners
         button.setOnClickListener(this);
         unhidePass.setOnClickListener(this);
-
+        toRegister.setOnClickListener(this);
     }
 
     @Override
@@ -57,9 +60,24 @@ public class LoginActivity extends Activity implements LoginView,
                 String email = inputEmail.getText().toString().trim();
                 String password = inputPassword.getText().toString().toString();
                 presenter.validateCredentials(email, password);
+                break;
             case R.id.loginUnhidePassword:
                 presenter.changePassVisibility(inputPassword, unhidePass);
+                break;
+            case R.id.loginAlreadyUser:
+                navigateToRegister();
+                break;
         }
+    }
+
+    @Override
+    public void navigateToRegister() {
+        startActivity(new Intent(this, RegisterActivity.class));
+    }
+
+    @Override
+    public void navigateToHome() {
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     @Override
@@ -70,11 +88,6 @@ public class LoginActivity extends Activity implements LoginView,
     @Override
     public void setPasswordError() {
         Toast.makeText(LoginActivity.this, R.string.password_error, Toast.LENGTH_SHORT).show();
-    }
-
-    @Override
-    public void navigateToHome() {
-        startActivity(new Intent(this, MainActivity.class));
     }
 
     @Override

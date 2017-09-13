@@ -33,7 +33,7 @@ public class LoginInteractorImpl implements LoginInteractor {
             return;
         } else {
             mAuth.signInWithEmailAndPassword(email, password)
-                    .addOnCompleteListener((Executor) this, new OnCompleteListener<AuthResult>() {
+                    .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                         @Override
                         public void onComplete(@NonNull Task<AuthResult> task) {
                             Log.d(TAG, "signInWithEmail:onComplete:" + task.isSuccessful());

@@ -2,7 +2,9 @@ package churt.a12explorers.Main;
 
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -10,16 +12,26 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import churt.a12explorers.About.AboutTab;
 import churt.a12explorers.Account.AccountTab;
 import churt.a12explorers.Home.HomeTab;
 import churt.a12explorers.Leaderboard.LeaderboardTab;
+import churt.a12explorers.Login.LoginActivity;
 import churt.a12explorers.R;
 
 public class MainActivity extends AppCompatActivity {
+
+    private static final String TAG = MainActivity.class.getSimpleName();
+    private FirebaseAuth mAuth;
+    private FirebaseAuth.AuthStateListener mAuthListener;
+    private FirebaseUser user;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -54,6 +66,39 @@ public class MainActivity extends AppCompatActivity {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(mViewPager);
+
+        mAuth = FirebaseAuth.getInstance();
+        mAuthListener = new FirebaseAuth.AuthStateListener() {
+            @Override
+            public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+                user = firebaseAuth.getCurrentUser();
+                if (user != null) {
+                    // User is signed in
+                    Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+                } else {
+                    // User is signed out
+                    Log.d(TAG, "onAuthStateChanged:signed_out");
+                    navigateToLogin();
+                }
+                // ...
+            }
+        };
+    }
+
+    // **** AUTH LISTENER METHODS **** //
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        mAuth.addAuthStateListener(mAuthListener);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        if(mAuthListener != null) {
+            mAuth.removeAuthStateListener(mAuthListener);
+        }
     }
 
 
@@ -132,5 +177,9 @@ public class MainActivity extends AppCompatActivity {
             }
             return null;
         }
+    }
+
+    public void navigateToLogin() {
+        startActivity(new Intent(this, LoginActivity.class));
     }
 }

@@ -17,12 +17,14 @@ import android.widget.Toast;
 
 public interface LoginView {
 
+    void navigateToRegister();
+
+    void navigateToHome();
+
     void setEmailError();
 
     void setPasswordError();
 
     void setAuthError();
-
-    void navigateToHome();
 
 }

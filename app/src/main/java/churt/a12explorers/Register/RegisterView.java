@@ -18,4 +18,6 @@ public interface RegisterView {
     void setConfirmPassError();
 
     void setAuthError();
+
+    void setNameError();
 }
