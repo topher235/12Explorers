@@ -52,4 +52,13 @@
         android:layout_centerVertical="true"
         android:text="Login" />
 
+    <TextView
+        android:id="@+id/loginAlreadyUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="94dp"
+        android:text="Not a user yet? Register here."
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+
 </RelativeLayout>
