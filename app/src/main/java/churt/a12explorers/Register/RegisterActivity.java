@@ -12,6 +12,8 @@ import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
 
+import churt.a12explorers.Login.LoginActivity;
+import churt.a12explorers.Main.MainActivity;
 import churt.a12explorers.R;
 
 /**

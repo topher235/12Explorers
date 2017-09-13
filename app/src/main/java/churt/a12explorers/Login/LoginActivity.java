@@ -9,6 +9,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import churt.a12explorers.Main.MainActivity;
 import churt.a12explorers.R;
 
 /**

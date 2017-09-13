@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/home_two_choice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:text="Two Choice" />
+
+    <Button
+        android:id="@+id/home_four_choice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/home_two_choice_btn"
+        android:layout_below="@+id/home_two_choice_btn"
+        android:layout_marginTop="50dp"
+        android:text="Four Choice" />
+
+    <Button
+        android:id="@+id/home_picture_choice_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/home_four_choice_btn"
+        android:layout_below="@+id/home_four_choice_btn"
+        android:layout_marginTop="69dp"
+        android:text="Picture Choice" />
+
+</RelativeLayout>

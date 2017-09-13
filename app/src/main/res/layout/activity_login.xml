@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/loginEmailInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/loginPasswordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/loginEmailInput"
+        android:layout_below="@+id/loginEmailInput"
+        android:layout_marginTop="19dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/loginUnhidePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="unhidePass"
+        android:text="Unhide"
+        android:layout_alignBaseline="@+id/loginPasswordInput"
+        android:layout_alignBottom="@+id/loginPasswordInput"
+        android:layout_toEndOf="@+id/loginPasswordInput" />
+
+    <TextView
+        android:id="@+id/loginForgotPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Forgot Password?"
+        android:layout_below="@+id/loginPasswordInput"
+        android:layout_alignEnd="@+id/loginPasswordInput" />
+
+    <Button
+        android:id="@+id/loginBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Login" />
+
+</RelativeLayout>

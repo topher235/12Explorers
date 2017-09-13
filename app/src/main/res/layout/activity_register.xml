@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/registerEmailInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/registerPasswordInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/registerEmailInput"
+        android:layout_below="@+id/registerEmailInput"
+        android:layout_marginTop="17dp"
+        android:ems="10"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center" />
+
+    <EditText
+        android:id="@+id/registerPasswordConfirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/registerPasswordInput"
+        android:layout_below="@+id/registerPasswordInput"
+        android:layout_marginTop="13dp"
+        android:ems="10"
+        android:hint="Confirm password"
+        android:inputType="textPassword"
+        android:textAlignment="center" />
+
+    <TextView
+        android:id="@+id/registerUnhidePassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/registerPasswordInput"
+        android:layout_alignBottom="@+id/registerPasswordInput"
+        android:layout_toEndOf="@+id/registerPasswordInput"
+        android:onClick="unhidePass"
+        android:text="unhide" />
+
+    <Button
+        android:id="@+id/registerBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/registerPasswordConfirm"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="46dp"
+        android:onClick="registerUser"
+        android:text="Register" />
+
+</RelativeLayout>
