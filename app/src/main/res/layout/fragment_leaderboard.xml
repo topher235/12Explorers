@@ -1,5 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:stretchColumns="1"
+    android:id="@+id/table">
 
-</RelativeLayout>
+    <TableRow
+        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:padding="3dp"
+            android:text="Avatar"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:gravity="center"
+            android:padding="3dp"
+            android:text="Name"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:gravity="right"
+            android:text="Points"
+            android:padding="3dp"
+            android:textSize="30sp"
+            android:background="@drawable/shape"
+            android:textColor="#fff"/>
+    </TableRow>
+
+
+</TableLayout>

@@ -5,6 +5,7 @@ package churt.a12explorers.Helper;
  */
 
 public class User {
+
     public String firstName, lastName, email, avatar;
     public int points;
 

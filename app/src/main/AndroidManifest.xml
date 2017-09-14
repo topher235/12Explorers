@@ -14,6 +14,7 @@
         <activity android:name=".FourChoice.FourChoiceActivity"></activity>
         <activity android:name=".PictureChoice.PictureChoiceActivity"></activity>
         <activity android:name=".TwoChoice.TwoChoiceActivity"></activity>
+        <activity android:name=".AvatarChoice"></activity>
         <activity
             android:name=".Main.MainActivity"
             android:label="@string/title_activity_main"

@@ -10,23 +10,28 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="43dp"
+        android:background="@drawable/button_round_corners"
         android:text="Sign Out" />
 
     <TextView
         android:id="@+id/account_num_points_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="150dp"
-        android:text="Points earned: " />
+        android:text="Points earned: "
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/account_avatar_imgBtn" />
 
     <ImageButton
         android:id="@+id/account_avatar_imgBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/account_num_points_textview"
+        android:background="@drawable/img_round_corners"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp"
+        android:minHeight="150dp"
+        android:minWidth="150dp"
+        app:srcCompat="@android:drawable/ic_input_add"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="48dp"
-        app:srcCompat="@android:drawable/ic_input_add" />
+        android:layout_marginTop="30dp" />
 </RelativeLayout>

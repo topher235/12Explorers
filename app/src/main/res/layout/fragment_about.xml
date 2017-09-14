@@ -3,21 +3,26 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
-    <ImageView
-        android:id="@+id/about_logo_imgview"
-        android:layout_width="wrap_content"
+    <ImageButton
+        android:id="@+id/about_logo_imgbtn"
         android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:maxHeight="200dp"
+        android:maxWidth="200dp"
+        android:minHeight="150dp"
+        android:minWidth="150dp"
+        app:srcCompat="@drawable/blue_phc_logo"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="53dp"
-        app:srcCompat="@android:drawable/ic_delete" />
+        android:layout_marginTop="63dp" />
 
     <TextView
         android:id="@+id/about_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/about_logo_imgview"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="122dp"
-        android:text="TextView" />
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="5dp"
+        android:text="TextView"
+        android:layout_below="@+id/about_logo_imgbtn"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

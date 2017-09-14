@@ -4,6 +4,7 @@ package churt.a12explorers.Main;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.support.annotation.NonNull;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
@@ -18,9 +19,15 @@ import android.view.MenuItem;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import churt.a12explorers.About.AboutTab;
 import churt.a12explorers.Account.AccountTab;
+import churt.a12explorers.Helper.User;
 import churt.a12explorers.Home.HomeTab;
 import churt.a12explorers.Leaderboard.LeaderboardTab;
 import churt.a12explorers.Login.LoginActivity;
@@ -32,6 +39,7 @@ public class MainActivity extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private FirebaseAuth.AuthStateListener mAuthListener;
     private FirebaseUser user;
+    User currentUser;
 
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
@@ -83,6 +91,8 @@ public class MainActivity extends AppCompatActivity {
                 // ...
             }
         };
+
+        getUserObject();
     }
 
     // **** AUTH LISTENER METHODS **** //
@@ -181,5 +191,31 @@ public class MainActivity extends AppCompatActivity {
 
     public void navigateToLogin() {
         startActivity(new Intent(this, LoginActivity.class));
+    }
+
+    private void getUserObject() {
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
+        mDatabase.child("Users").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(
+                new ValueEventListener() {
+                    @Override
+                    public void onDataChange(DataSnapshot dataSnapshot) {
+                        String fName = dataSnapshot.child("firstName").getValue(String.class);
+                        String lName = dataSnapshot.child("lastName").getValue(String.class);
+                        String email = dataSnapshot.child("email").getValue(String.class);
+                        String avatar = dataSnapshot.child("avatar").getValue(String.class);
+                        Integer points = dataSnapshot.child("points").getValue(Integer.class);
+                        setUser(fName, lName, email, avatar, points);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+
+                    }
+                }
+        );
+    }
+
+    private void setUser(String fName, String lName, String email, String avatar, int points) {
+        currentUser = new User(fName, lName, email, avatar, points);
     }
 }
