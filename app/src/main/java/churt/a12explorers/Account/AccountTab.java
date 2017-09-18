@@ -42,27 +42,28 @@ public class AccountTab extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        if(mAuth.getCurrentUser() != null) {
+            signOutBtn = (Button) rootView.findViewById(R.id.account_sign_out_btn);
+            signOutBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    mAuth.signOut();
+                }
+            });
 
-        signOutBtn = (Button) rootView.findViewById(R.id.account_sign_out_btn);
-        signOutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                mAuth.signOut();
-            }
-        });
+            avatarChoiceBtn = (ImageButton) rootView.findViewById(R.id.account_avatar_imgBtn);
+            setAvatarInUI();
+            avatarChoiceBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    startActivityForResult(new Intent(getActivity(), AvatarChoice.class), 1);
+                }
+            });
 
-        avatarChoiceBtn = (ImageButton) rootView.findViewById(R.id.account_avatar_imgBtn);
-        setAvatarInUI();
-        avatarChoiceBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivityForResult(new Intent(getActivity(), AvatarChoice.class), 1);
-            }
-        });
+            points = (TextView) rootView.findViewById(R.id.account_num_points_textview);
+            setPointInUI();
 
-        points = (TextView) rootView.findViewById(R.id.account_num_points_textview);
-        setPointInUI();
-
+        }
         return rootView;
     }
 

@@ -9,7 +9,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="43dp"
+        android:layout_marginBottom="?attr/actionBarSize"
         android:background="@drawable/button_round_corners"
         android:text="Sign Out" />
 
@@ -23,6 +23,7 @@
 
     <ImageButton
         android:id="@+id/account_avatar_imgBtn"
+        android:layout_marginTop="?attr/actionBarSize"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/img_round_corners"
@@ -32,6 +33,5 @@
         android:minWidth="150dp"
         app:srcCompat="@android:drawable/ic_input_add"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

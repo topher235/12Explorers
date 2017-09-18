@@ -2,4 +2,57 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/four_choice_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="34dp"
+        android:text="Button"
+        android:layout_above="@+id/four_choice_btn2"
+        android:layout_alignStart="@+id/four_choice_btn2" />
+
+    <Button
+        android:id="@+id/four_choice_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_above="@+id/four_choice_btn3"
+        android:layout_alignStart="@+id/four_choice_btn3"
+        android:layout_marginBottom="34dp" />
+
+    <Button
+        android:id="@+id/four_choice_btn3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_marginBottom="32dp"
+        android:layout_above="@+id/four_choice_btn4"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:id="@+id/four_choice_btn4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/four_choice_btn3"
+        android:layout_marginBottom="41dp" />
+
+    <TextView
+        android:id="@+id/four_choice_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/four_choice_is_correct"
+        android:layout_marginTop="40dp" />
+
+    <TextView
+        android:id="@+id/four_choice_is_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="TextView"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

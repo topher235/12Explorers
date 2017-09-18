@@ -1,41 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:fontFamily="monospace"
+        android:text="12EXPLORERS"
+        android:textColor="@android:color/white"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/registerEmailInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/registerPasswordInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="15dp"
         android:ems="10"
         android:hint="Email"
         android:inputType="textEmailAddress"
-        android:textAlignment="center"
-        android:layout_marginBottom="23dp"
-        android:layout_above="@+id/registerPasswordInput"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
 
     <EditText
         android:id="@+id/registerPasswordInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/registerEmailInput"
+        android:layout_centerVertical="true"
         android:ems="10"
         android:hint="Password"
         android:inputType="textPassword"
-        android:textAlignment="center"
-        android:layout_centerVertical="true"
-        android:layout_alignStart="@+id/registerEmailInput" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
 
     <EditText
         android:id="@+id/registerPasswordConfirm"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/registerPasswordInput"
+        android:layout_below="@+id/registerPasswordInput"
+        android:layout_marginTop="5dp"
         android:ems="10"
         android:hint="Confirm password"
         android:inputType="textPassword"
-        android:textAlignment="center"
-        android:layout_below="@+id/registerPasswordInput"
-        android:layout_alignStart="@+id/registerPasswordInput"
-        android:layout_marginTop="24dp" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
 
     <TextView
         android:id="@+id/registerUnhidePassword"
@@ -45,29 +62,34 @@
         android:layout_alignBottom="@+id/registerPasswordInput"
         android:layout_toEndOf="@+id/registerPasswordInput"
         android:onClick="unhidePass"
-        android:text="unhide" />
+        android:text="unhide"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/registerBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/registerNotAUser"
+        android:layout_alignEnd="@+id/registerPasswordConfirm"
+        android:layout_alignStart="@+id/registerPasswordConfirm"
+        android:layout_marginBottom="42dp"
         android:onClick="registerUser"
         android:text="Register"
-        android:layout_marginBottom="42dp"
-        android:layout_above="@+id/registerNotAUser"
-        android:layout_centerHorizontal="true" />
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <EditText
         android:id="@+id/registerLastNameInput"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/registerEmailInput"
         android:layout_alignStart="@+id/registerEmailInput"
-        android:layout_below="@+id/registerFirstNameInput"
-        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Last Name"
         android:inputType="textPersonName"
-        android:textAlignment="center" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
 
     <EditText
         android:id="@+id/registerFirstNameInput"
@@ -75,11 +97,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignStart="@+id/registerLastNameInput"
-        android:layout_marginTop="59dp"
+        android:layout_marginTop="150dp"
         android:ems="10"
         android:hint="First Name"
         android:inputType="textPersonName"
-        android:textAlignment="center" />
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/white" />
 
     <TextView
         android:id="@+id/registerNotAUser"
@@ -88,6 +111,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="35dp"
-        android:text="Already a user? Login here." />
+        android:text="@string/already_user"
+        android:textColor="@android:color/white"
+        android:textSize="18sp" />
 
 </RelativeLayout>

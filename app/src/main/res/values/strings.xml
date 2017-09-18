@@ -9,4 +9,7 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="action_settings">Settings</string>
     <string name="section_format">Hello World from section: %1$d</string>
+
+    <string name="not_user">Not a user yet? <u><b>Register here.</b></u></string>
+    <string name="already_user">Already a user? <u><b>Login here.</b></u></string>
 </resources>

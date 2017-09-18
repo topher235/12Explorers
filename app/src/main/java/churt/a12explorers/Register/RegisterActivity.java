@@ -165,7 +165,7 @@ public class RegisterActivity extends Activity implements RegisterView,
     private void insertIntoDatabase(String firstName, String lastName, String email) {
         FirebaseDatabase db = FirebaseDatabase.getInstance();
         DatabaseReference myRef = db.getReference();
-        User user = new User(firstName, lastName, email, "", 0);
+        User user = new User(firstName, lastName, email, "", 0, 0, 0);
         myRef.child("Users").child(mAuth.getCurrentUser().getUid()).setValue(user);
     }
 }

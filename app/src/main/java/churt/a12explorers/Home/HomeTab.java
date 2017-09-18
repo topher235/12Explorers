@@ -9,8 +9,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import churt.a12explorers.FourChoice.FourChoiceActivity;
-import churt.a12explorers.Main.MainActivity;
-import churt.a12explorers.PictureChoice.PictureChoiceActivity;
 import churt.a12explorers.R;
 import churt.a12explorers.TwoChoice.TwoChoiceActivity;
 
@@ -21,7 +19,6 @@ import churt.a12explorers.TwoChoice.TwoChoiceActivity;
 public class HomeTab extends Fragment {
     private Button twoChoiceBtn;
     private Button fourChoiceBtn;
-    private Button pictureChoiceBtn;
 
     @Override
     public View onCreateView(LayoutInflater inflater,
@@ -41,14 +38,6 @@ public class HomeTab extends Fragment {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getActivity(), FourChoiceActivity.class));
-            }
-        });
-
-        pictureChoiceBtn = (Button) rootView.findViewById(R.id.home_picture_choice_btn);
-        pictureChoiceBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getActivity(), PictureChoiceActivity.class));
             }
         });
 

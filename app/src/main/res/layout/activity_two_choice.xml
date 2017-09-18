@@ -2,4 +2,39 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/two_choice_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/two_choice_btn1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/two_choice_question"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="133dp"
+        android:text="Button" />
+
+    <Button
+        android:id="@+id/two_choice_btn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/two_choice_btn1"
+        android:layout_below="@+id/two_choice_btn1"
+        android:layout_marginTop="68dp"
+        android:text="Button" />
+
+    <TextView
+        android:id="@+id/two_choice_is_correct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/two_choice_question"
+        android:layout_marginBottom="48dp"
+        android:text="TextView" />
 </RelativeLayout>

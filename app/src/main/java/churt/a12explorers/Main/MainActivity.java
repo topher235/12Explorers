@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
             }
         };
 
-        getUserObject();
     }
 
     // **** AUTH LISTENER METHODS **** //
@@ -181,7 +180,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     return "ACCOUNT";
                 case 2:
-                    return "LEADERBOARD";
+                    return "LEADERS";
                 case 3:
                     return "ABOUT";
             }
@@ -193,7 +192,7 @@ public class MainActivity extends AppCompatActivity {
         startActivity(new Intent(this, LoginActivity.class));
     }
 
-    private void getUserObject() {
+    /*private void getUserObject() {
         DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference();
         mDatabase.child("Users").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(
                 new ValueEventListener() {
@@ -217,5 +216,5 @@ public class MainActivity extends AppCompatActivity {
 
     private void setUser(String fName, String lName, String email, String avatar, int points) {
         currentUser = new User(fName, lName, email, avatar, points);
-    }
+    }*/
 }

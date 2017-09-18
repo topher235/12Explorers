@@ -2,6 +2,7 @@ package churt.a12explorers.Login;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -43,6 +44,10 @@ public class LoginActivity extends Activity implements LoginView,
         unhidePass = (TextView) findViewById(R.id.loginUnhidePassword);
         toRegister = (TextView) findViewById(R.id.loginAlreadyUser);
         button = (Button) findViewById(R.id.loginBtn);
+
+        //Set UI Design
+        button.setBackgroundColor(Color.WHITE);
+        button.setTextColor(Color.rgb(29, 54, 108));
 
         //Initialize Presenter
         presenter = new LoginPresenterImpl(this);

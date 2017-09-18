@@ -1,16 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="100dp"
+        android:text="Let's play a game!"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="30sp" />
 
     <Button
         android:id="@+id/home_two_choice_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:text="Two Choice" />
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="105dp"
+        android:layout_marginTop="200dp"
+        android:minHeight="100dp"
+        android:minWidth="200dp"
+        android:text="This or That"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/home_four_choice_btn"
@@ -18,16 +37,12 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/home_two_choice_btn"
         android:layout_below="@+id/home_two_choice_btn"
-        android:layout_marginTop="50dp"
-        android:text="Four Choice" />
-
-    <Button
-        android:id="@+id/home_picture_choice_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/home_four_choice_btn"
-        android:layout_below="@+id/home_four_choice_btn"
-        android:layout_marginTop="69dp"
-        android:text="Picture Choice" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:minHeight="100dp"
+        android:minWidth="200dp"
+        android:text="Four Corner"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="20sp" />
 
 </RelativeLayout>
