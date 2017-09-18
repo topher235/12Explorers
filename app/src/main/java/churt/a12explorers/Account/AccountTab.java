@@ -29,7 +29,7 @@ import churt.a12explorers.R;
 
 public class AccountTab extends Fragment {
     private Button signOutBtn;
-    private TextView points;
+    private TextView points, userName;
     private ImageButton avatarChoiceBtn;
     private FirebaseAuth mAuth;
     private DatabaseReference mDatabase;
@@ -61,7 +61,8 @@ public class AccountTab extends Fragment {
             });
 
             points = (TextView) rootView.findViewById(R.id.account_num_points_textview);
-            setPointInUI();
+            userName = (TextView) rootView.findViewById(R.id.account_name_user);
+            setUserData();
 
         }
         return rootView;
@@ -131,13 +132,15 @@ public class AccountTab extends Fragment {
         );
     }
 
-    private void setPointInUI() {
-        mDatabase.child("Users").child(mAuth.getCurrentUser().getUid()).child("points").addListenerForSingleValueEvent(
+    private void setUserData() {
+        mDatabase.child("Users").child(mAuth.getCurrentUser().getUid()).addListenerForSingleValueEvent(
                 new ValueEventListener() {
                     @Override
                     public void onDataChange(DataSnapshot dataSnapshot) {
-                        Integer i = dataSnapshot.getValue(Integer.class);
-                        setPointsInUI(i);
+                        Integer i = dataSnapshot.child("points").getValue(Integer.class);
+                        String fName = dataSnapshot.child("firstName").getValue(String.class);
+                        //String lName = dataSnapshot.child("lastName").getValue(String.class);
+                        setUserData(i, fName);
                     }
 
                     @Override
@@ -148,7 +151,8 @@ public class AccountTab extends Fragment {
         );
     }
 
-    private void setPointsInUI(Integer i) {
-        points.setText("Points earned: " + i.toString());
+    private void setUserData(Integer i, String fName) {
+        points.setText("You've earned " + i.toString() + " points!");
+        userName.setText("Hello, " + fName);
     }
 }

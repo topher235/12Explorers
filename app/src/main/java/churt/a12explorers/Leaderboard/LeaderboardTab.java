@@ -108,18 +108,32 @@ public class LeaderboardTab extends Fragment {
 
     private void displayLeaderboard() {
         for(User u : listUser) {
+            Integer pos = 1;
             int j = 0;
             //Table row
             TableRow tr = new TableRow(getActivity());
 
-            //Center TextView
+            //Left TextView
             TextView tvLeft = new TextView(getActivity());
             tvLeft.setId(j++);
-            tvLeft.setPadding(3,3,3,3);
+            tvLeft.setPadding(3, 3, 3, 3);
             tvLeft.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.shape, null));
-            tvLeft.setText(u.firstName + " " + u.lastName);
+            tvLeft.setText(pos.toString());
             tvLeft.setTextColor(Color.WHITE);
             tvLeft.setTextSize(20);
+            tvLeft.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
+
+            //Left TextView
+            TextView tvCenter = new TextView(getActivity());
+            tvCenter.setId(j++);
+            tvCenter.setPadding(3,3,3,3);
+            tvCenter.setBackground(ResourcesCompat.getDrawable(getResources(), R.drawable.shape, null));
+            tvCenter.setText(u.firstName + " " + u.lastName);
+            tvCenter.setTextColor(Color.WHITE);
+            tvCenter.setTextSize(20);
+            tvCenter.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
+
             //Right TextView
             TextView tvRight = new TextView(getActivity());
             tvRight.setId(j++);
@@ -128,9 +142,11 @@ public class LeaderboardTab extends Fragment {
             tvRight.setText(String.valueOf(u.points));
             tvRight.setTextColor(Color.WHITE);
             tvRight.setTextSize(20);
+            tvRight.setTextAlignment(View.TEXT_ALIGNMENT_CENTER);
 
             //Add views to row
             tr.addView(tvLeft);
+            tr.addView(tvCenter);
             tr.addView(tvRight);
 
             //Add row to table

@@ -20,9 +20,11 @@
         android:id="@+id/about_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="45dp"
-        android:layout_marginLeft="5dp"
-        android:text="TextView"
         android:layout_below="@+id/about_logo_imgbtn"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="45dp"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 </RelativeLayout>

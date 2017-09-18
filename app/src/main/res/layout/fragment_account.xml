@@ -3,27 +3,45 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent" android:layout_height="match_parent">
 
+    <TextView
+        android:id="@+id/account_name_user"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="250dp"
+        android:textSize="30sp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/colorPrimaryDark"/>
+
     <Button
         android:id="@+id/account_sign_out_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="?attr/actionBarSize"
+        android:layout_marginBottom="100dp"
         android:background="@drawable/button_round_corners"
-        android:text="Sign Out" />
+        android:minHeight="75dp"
+        android:minWidth="150dp"
+        android:text="Sign Out"
+        android:textColor="@android:color/white"
+        android:textSize="22sp" />
 
     <TextView
         android:id="@+id/account_num_points_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_below="@id/account_name_user"
         android:text="Points earned: "
+        android:textSize="26sp"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
         android:layout_alignStart="@+id/account_avatar_imgBtn" />
 
     <ImageButton
         android:id="@+id/account_avatar_imgBtn"
-        android:layout_marginTop="?attr/actionBarSize"
+        android:layout_marginTop="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/img_round_corners"

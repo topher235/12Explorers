@@ -6,25 +6,23 @@
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/home_lets_play"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
         android:layout_marginTop="100dp"
         android:text="Let's play a game!"
         android:textColor="@color/colorPrimaryDark"
-        android:textSize="30sp" />
+        android:textSize="30sp"
+        android:textStyle="bold"/>
 
     <Button
         android:id="@+id/home_two_choice_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="105dp"
-        android:layout_marginTop="200dp"
+        android:layout_below="@id/home_lets_play"
+        android:layout_marginTop="50dp"
         android:minHeight="100dp"
         android:minWidth="200dp"
         android:text="This or That"
@@ -35,7 +33,6 @@
         android:id="@+id/home_four_choice_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/home_two_choice_btn"
         android:layout_below="@+id/home_two_choice_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
