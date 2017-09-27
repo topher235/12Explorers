@@ -2,6 +2,7 @@ package churt.a12explorers.Account;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -42,6 +43,9 @@ public class AccountTab extends Fragment {
         mAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
+        Typeface sitkaItalics = Typeface.createFromAsset(this.getContext().getApplicationContext().getAssets(), "fonts/sitka-small-815.ttf");
+        Typeface sitka = Typeface.createFromAsset(this.getContext().getApplicationContext().getAssets(), "fonts/sitka-small-599.ttf");
+
         if(mAuth.getCurrentUser() != null) {
             signOutBtn = (Button) rootView.findViewById(R.id.account_sign_out_btn);
             signOutBtn.setOnClickListener(new View.OnClickListener() {
@@ -61,7 +65,10 @@ public class AccountTab extends Fragment {
             });
 
             points = (TextView) rootView.findViewById(R.id.account_num_points_textview);
+            points.setTypeface(sitka);
             userName = (TextView) rootView.findViewById(R.id.account_name_user);
+            userName.setTypeface(sitkaItalics);
+
             setUserData();
 
         }

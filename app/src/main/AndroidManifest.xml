@@ -11,9 +11,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".Register.RegisterActivity"></activity>
         <activity android:name=".Login.LoginActivity"></activity>
-        <activity android:name=".FourChoice.FourChoiceActivity"></activity>
+        <activity android:name=".FourChoice.FourChoiceActivity"
+            android:parentActivityName=".Main.MainActivity">
+
+        </activity>
         <activity android:name=".PictureChoice.PictureChoiceActivity"></activity>
-        <activity android:name=".TwoChoice.TwoChoiceActivity"></activity>
+        <activity android:name=".TwoChoice.TwoChoiceActivity"
+            android:parentActivityName=".Main.MainActivity">
+        </activity>
         <activity android:name=".AvatarChoice"></activity>
         <activity
             android:name=".Main.MainActivity"

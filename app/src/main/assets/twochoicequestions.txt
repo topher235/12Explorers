@@ -1,1 +1,12 @@
-0
+1
+1. Rear Admiral Grace Murray Hopper served during World War I. = True = False = True
+2. This explorer had Navy destroyers named after him. = William Francis Gibbs = Admiral Elmo Zumwalt = Admiral Elmo Zumwalt
+3. This ship was dubbed as "The Most Famous Ship that Didn't Sink." = The SS United States = The USS Constitution = The SS United States
+4. William Francis Gibbs designed the SS United States 35 years before it was built. = True = False = True
+5. This shipyard built the SS United States. = New York Shipbuilding Corp. = Newport News Shipbuilding = Newport News Shipbuilding
+6. That explorer was NOT influential during World War II. = Siah Carter = Coleman Kent = Siah Carter
+7. This explorer relied on ancient traditions for navigation. = Pius Mau Piailug = Captain James Cook = Pius Mau Piailug
+8. That explorer was NOT influential during the War of 1812. = William Francis Gibbs = Rezin Gist = Rezin Gist
+9. This explorer found freedom on the USS Monitor. = Siah Carter = Coleman Kent = Siah Carter
+10. This explorer was a naval surgeon. = Dr. Aaron Oberly = Admiral Elmo Zumwalt = Dr. Aaron Oberly
+11.

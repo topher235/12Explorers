@@ -6,35 +6,54 @@
         android:id="@+id/two_choice_question"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold"
+        android:textSize="20sp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp"
-        android:text="TextView" />
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="10dp"
+        android:paddingLeft="10dp"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/two_choice_btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/two_choice_question"
+        android:layout_marginTop="175dp"
+        android:minHeight="75dp"
+        android:minWidth="300dp"
+        android:maxWidth="300dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="133dp"
-        android:text="Button" />
+        android:text="Button"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/two_choice_btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/two_choice_btn1"
-        android:layout_below="@+id/two_choice_btn1"
-        android:layout_marginTop="68dp"
-        android:text="Button" />
+        android:layout_marginTop="50dp"
+        android:layout_below="@id/two_choice_btn1"
+        android:minHeight="75dp"
+        android:minWidth="300dp"
+        android:maxWidth="300dp"
+        android:layout_centerHorizontal="true"
+        android:text="Button"
+        android:textSize="18sp"
+        android:textColor="@color/colorPrimaryDark"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/two_choice_is_correct"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:text="TextView"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimaryDark"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/two_choice_question"
-        android:layout_marginBottom="48dp"
-        android:text="TextView" />
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

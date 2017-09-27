@@ -1,5 +1,10 @@
 3
-Who became a pioneer of innovative computer programming while serving in the U.S. Navy during World War II? = Rear Admiral Grace Murray Hopper = Coleman Kent = Siah Carter = Captain Christopher Newport = Rear Admiral Grace Murray Hopper
-Who charted the course that led to the first permanent English settlement in North America? = Coleman Kent = Captain Christopher Newport = Maritime Drone = Pius Mau Piailug = Coleman Kent
-Which of these explorers does NOT exemplify the Age of Innovation? = Maritime Drone = Admiral Elmo Zumwalt = Rear Admiral Grace Murray Hopper = Siah Carter = Siah Carter
-
+1. Who became a pioneer of innovative computer programming while serving in the U.S. Navy during World War II? = Rear Admiral Grace Murray Hopper = Coleman Kent = Siah Carter = Captain Christopher Newport = Rear Admiral Grace Murray Hopper
+2. Who charted the course that led to the first permanent English settlement in North America? = Coleman Kent = Captain Christopher Newport = Maritime Drone = Pius Mau Piailug = Coleman Kent
+3. Which of these explorers does NOT exemplify the Age of Innovation? = Maritime Drone = Admiral Elmo Zumwalt = Rear Admiral Grace Murray Hopper = Siah Carter = Siah Carter
+4. Who was the youngest Chief of Naval Operations? = Siah Carter = Admiral Elmo Zumwalt = Pius Mau Piailug = Captain James Cook = Admiral Elmo Zumwalt
+5. Who was the designer of the SS United States? = Rear Admiral Grace Murray Hopper = Coleman Kent = Maritime Drone = William Francis Gibbs = William Francis Gibbs
+6. Which of these was not a concern to the designer of the SS United States? = Speed = Fireproof = Floodproof = Cost = Cost
+7. Which of these explorers does NOT exemplify the Age of Steel? = Chester Lozier = Coleman Kent = Dr. Aaron Oberly = Pius Mau Piailug = Pius Mau Piailug
+8. Which of these explorers does NOT exemplify the Age of Sail? = Pius Mau Piailug = Captain James Cook = Captain Christopher Newport = Chester Lozier = Chester Lozier
+9.

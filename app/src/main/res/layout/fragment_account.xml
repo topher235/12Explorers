@@ -18,11 +18,10 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
-        android:background="@drawable/button_round_corners"
+        android:layout_marginBottom="75dp"
+        android:background="@drawable/sign_out_btn"
         android:minHeight="75dp"
         android:minWidth="150dp"
-        android:text="Sign Out"
         android:textColor="@android:color/white"
         android:textSize="22sp" />
 
@@ -35,13 +34,11 @@
         android:text="Points earned: "
         android:textSize="26sp"
         android:textColor="@color/colorPrimaryDark"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true"
-        android:layout_alignStart="@+id/account_avatar_imgBtn" />
+        android:layout_centerHorizontal="true" />
 
     <ImageButton
         android:id="@+id/account_avatar_imgBtn"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="75dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/img_round_corners"

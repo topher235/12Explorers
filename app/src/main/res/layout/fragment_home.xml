@@ -11,13 +11,14 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="100dp"
-        android:text="Let's play a game!"
+        android:text="Test your knowledge!"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="30sp"
         android:textStyle="bold"/>
 
     <Button
         android:id="@+id/home_two_choice_btn"
+        android:background="@drawable/this_or_that"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -25,7 +26,6 @@
         android:layout_marginTop="50dp"
         android:minHeight="100dp"
         android:minWidth="200dp"
-        android:text="This or That"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp" />
 
@@ -33,12 +33,12 @@
         android:id="@+id/home_four_choice_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="@drawable/four_choice"
         android:layout_below="@+id/home_two_choice_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="75dp"
         android:minHeight="100dp"
         android:minWidth="200dp"
-        android:text="Four Corner"
         android:textColor="@color/colorPrimaryDark"
         android:textSize="20sp" />
 
